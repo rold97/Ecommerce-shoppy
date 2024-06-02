@@ -23,7 +23,7 @@ const NavIcons = () => {
   };
 
   return (
-    <div className="flex items-center gap-4 xl:gap-6 relative">
+    <div className="flex items-center gap-4 xl:gap-6 relative ">
       <Image
         src="/profile.png"
         alt="profile icon"
@@ -41,14 +41,11 @@ const NavIcons = () => {
         height={22}
         className="cursor-pointer"
       />
-      <div className="cursor-pointer relative">
-        <Image
-          src="/cart.png"
-          alt="cart icon"
-          width={22}
-          height={22}
-          onClick={() => setIsCartOpen((prev) => !prev)}
-        />
+      <div
+        className="cursor-pointer relative"
+        onClick={() => setIsCartOpen((prev) => !prev)}
+      >
+        <Image src="/cart.png" alt="cart icon" width={22} height={22} />
         <div className="absolute -top-4 -right-4 w-6 h-6 bg-lightRed rounded-full flex items-center justify-center text-sm text-white">
           2
         </div>
